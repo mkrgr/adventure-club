@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Adventure Club – Das Geheimnis des goldenen Idols</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="hud" class="hidden">
+    <div id="topbar">
+      <div id="sceneTitle"></div>
+      <div id="gems" title="Edelsteine"></div>
+      <div id="inventory"></div>
+      <div id="timer" class="hidden"></div>
+      <div id="buttons">
+        <button id="btnHint" title="Hinweis (H)">💡 Hinweis</button>
+        <button id="btnReset" title="Szene neu starten (R)">↺</button>
+        <button id="btnSound" title="Ton an/aus (M)">🔊</button>
+        <button id="btnHelp" title="Steuerung (Esc)">?</button>
+        <button id="btnMenu" title="Hauptmenü">☰</button>
+      </div>
+    </div>
+    <div id="party"></div>
+    <div id="actions"></div>
+    <div id="compass" title="Laufrichtungen">
+      <span class="cw">W</span><span class="cd">D</span><span class="cs">S</span><span class="ca">A</span>
+      <div class="rose"></div>
+    </div>
+  </div>
+
+  <div id="dialog" class="hidden">
+    <canvas id="dlgPortrait" width="96" height="96"></canvas>
+    <div class="dlg-body"><div id="dlgName"></div><div id="dlgText"></div></div>
+  </div>
+
+  <div id="overlay" class="hidden"><div id="overlayBox"></div></div>
+
+  <script src="js/levels.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
